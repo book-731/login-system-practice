@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 最小高度 */
+    margin: 0;
+    background-color: #5180c5;
+}
+
+.login-card {
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.login-card h1 {
+  margin-top: 0; 
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column; 
+}
+
+input {
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input:focus {
+  border-color: #5180c5;
+  outline: none; 
+}
+
+button {
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #5180c5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4a75b8;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between; /* 將兩個元素分開對齊 */
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* 調整間距 */
+  cursor: pointer;
+}
+
+.remember-me input {
+  margin: 0; /* 移除預設的 margin */
+  width: 16px; /* 調整 checkbox 的大小 */
+  height: 16px; /* 調整 checkbox 的大小 */
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.register-card h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}

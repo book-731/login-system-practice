@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 響應式設計 -->
+        <title>login</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="login-card">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="text" id="username" name="username"  placeholder="帳號" required>
+                <input type="password" id="password" name="password" placeholder="密碼" required>
+                <div class="remember-forgot">
+                    <label class="remember-me"><input type="checkbox" id="rememberMe" name="rememberMe">記住這次登入</label>
+                    <a href="forgot-password.html">忘記密碼？</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="form-footer">
+                <span class="signup-text">還沒有帳號？ <a href="register.html">立即註冊</a></span>
+            </div>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
