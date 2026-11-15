@@ -1,0 +1,31 @@
+# 會員系統 API 規劃書
+
+## 1. 會員註冊
+- **網址與方法**：`POST /api/register`
+- **前端送來的資料 (Request)**：
+  - `username`：字串，必填（使用者名稱）
+  - `email`：字串，必填（信箱）
+  - `password`：字串，必填（密碼）
+- **後端與資料庫要做什麼**：
+  1. 檢查欄位是否都有填入。
+  2. 去 `users` 資料表檢查 `username` 或 `email` 有沒有重複。
+  3. 把密碼加密後，存進 `users` 資料表。
+- **回傳給前端的結果 (Response)**：
+  - **成功 (201)**：`{ "success": true, "message": "註冊成功" }`
+  - **失敗 (400 漏填 / 409 帳號信箱重複)**：`{ "success": false, "message": "錯誤原因" }`
+
+---
+
+## 2. 會員登入
+- **網址與方法**：`POST /api/login`
+- **前端送來的資料 (Request)**：
+  - `username`：字串，必填（帳號）
+  - `password`：字串，必填（密碼）
+  - `rememberMe`：布林值 `true/false`，選填（記住這次登入）
+- **後端與資料庫要做什麼**：
+  1. 去 `users` 資料表尋找對應的帳號。
+  2. 比對密碼是否正確。
+  3. 密碼正確的話，在 `user_login_logs` 資料表新增一筆登入紀錄。
+- **回傳給前端的結果 (Response)**：
+  - **成功 (200)**：`{ "success": true, "message": "登入成功" }`
+  - **失敗 (401 帳密錯誤)**：`{ "success": false, "message": "帳號或密碼錯誤" }`
