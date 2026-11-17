@@ -9,11 +9,11 @@
     <body>
         <div class="login-card">
             <h1>Login</h1>
-            <form id="loginForm">
+            <form id="login-form">
                 <input type="text" id="username" name="username"  placeholder="帳號" required>
                 <input type="password" id="password" name="password" placeholder="密碼" required>
                 <div class="remember-forgot">
-                    <label class="remember-me"><input type="checkbox" id="rememberMe" name="rememberMe">記住這次登入</label>
+                    <label class="remember-me"><input type="checkbox" id="remember-me" name="rememberMe">記住這次登入</label>
                     <a href="forgot-password.html">忘記密碼？</a>
                 </div>
                 <button type="submit">Login</button>
@@ -24,6 +24,6 @@
             <p id="errorMessage" class="error-message"></p>
         </div>
 
-        <script src="script.js"></script>
+        <script src="auth.js"></script>
     </body>
 </html>
